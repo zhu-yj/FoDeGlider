@@ -98,7 +98,7 @@ python3 software/serial_node.py
 
 ## Dataset
 
-The repository contains both raw motion-capture CSV files and processed data files used by the identification pipeline.
+The `data/` directory contains the raw motion-capture CSV files and the processed datasets used in the identification pipeline.
 
 ## Model Identification
 
