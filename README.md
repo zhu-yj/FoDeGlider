@@ -27,8 +27,8 @@ FoDeGlider/
 |-- electronics/                      # Electrical architecture and PCB design files
 |-- hardware/                         # Mechanical drawings and printable STL models
 `-- software/                         # Embedded firmware and control documentation
-  |-- serial_node.py                # ROS 2 joystick-to-serial control node
-  `-- firmware/                     # STM32 firmware and project files
+  |-- serial_node.py                  # ROS 2 joystick-to-serial control node
+  `-- firmware/                       # STM32 firmware and project files
 ```
 
 ## System Overview
