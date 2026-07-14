@@ -104,13 +104,7 @@ The repository contains both raw motion-capture CSV files and processed data fil
 
 The identification is organized into five sequential stages. The scripts in `code/run_scripts/` run the corresponding files in `code/identification/`. Generated result JSON files are passed from one stage to the next through the `INPUT_*_JSON` environment variables defined by the run scripts.
 
-The evaluation programs support comparisons between the full multibody model and the `single_rigid_body`, `no_force_scale`, `no_torque_scale`, `no_add_mass_scale`, and `no_add_inertia_scale` variants:
-
-- `code/evaluation/multi_vs_single.py` produces `multi_vs_single_summary.csv`.
-
-- `code/evaluation/scale_ablation.py` produces `scale_ablation_summary.csv`.
-
-Both summaries report the mean and median normalized mean-squared error at the window and trajectory levels.
+The evaluation programs support comparisons between the full multibody model and the `single_rigid_body`, `no_force_scale`, `no_torque_scale`, `no_add_mass_scale`, and `no_add_inertia_scale` variants. The scripts in `code/evaluation/` report the mean and median normalized mean-squared error at the window and trajectory levels.
 
 ## Firmware
 
