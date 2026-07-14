@@ -27,6 +27,8 @@ FoDeGlider/
 |-- electronics/                      # Electrical architecture and PCB design files
 |-- hardware/                         # Mechanical drawings and printable STL models
 `-- software/                         # Embedded firmware and control documentation
+  |-- serial_node.py                # ROS 2 joystick-to-serial control node
+  `-- firmware/                     # STM32 firmware and project files
 ```
 
 ## System Overview
@@ -61,13 +63,38 @@ FoDeGlider/
   </tr>
 </table>
 
-## Joystick Control Mapping
+## Surface System and Operation
+FoDeGlider communicates with an Ubuntu 20.04 supervisory computer through a 433 MHz Full-duplex transceiver. An Xbox controller is connected to the computer for manual operation. The ROS 2 joystick node reads the controller inputs, while `software/serial_node.py` converts them into serial commands and transmits the commands to FoDeGlider.
+
+### Joystick Control Mapping
 
 <p align="center">
   <img src="software/joystick_view_1.png" width="750" alt="FoDeGlider joystick control mapping">
   <br>
   <sub>Xbox control mapping for operating FoDeGlider.</sub>
 </p>
+
+### Connection Setup
+1. Connect the 433 MHz Full-duplex transceiver to the Ubuntu 20.04 computer.
+2. Attach the antenna to the Full-duplex transceiver.
+3. Connect the Xbox controller to the computer.
+4. Confirm that the serial device and controller are recognized by the operating system.
+
+### Running the Control Software
+
+The control software requires ROS 2 and the `joy` package. Open two terminals and source the ROS 2 environment in each terminal.
+
+In the first terminal, start the joystick node:
+
+```bash
+ros2 run joy joy_node
+```
+
+In the second terminal, run the serial control node from the repository root:
+
+```bash
+python3 software/serial_node.py
+```
 
 ## Dataset
 
