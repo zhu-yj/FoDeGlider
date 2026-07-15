@@ -39,7 +39,7 @@ FoDeGlider/
       <sub>Electrical architecture and onboard system connections.</sub>
     </td>
     <td width="30%" align="center">
-      <img src="electronics/PCB.png" width="430" alt="FoDeGlider printed circuit board">
+      <img src="assets/realboard.jpg" width="430" alt="FoDeGlider printed circuit board">
       <br>
       <sub>Printed circuit board for the embedded electronic system.</sub>
     </td>
