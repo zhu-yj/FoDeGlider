@@ -42,6 +42,8 @@ FoDeGlider is a miniature hybrid underwater glider equipped with two independent
   </tr>
 </table>
 
+## Joystick Control Mapping
+
 <p align="center">
   <img src="software/joystick_view_1.png" width="750" alt="FoDeGlider joystick control mapping">
   <br>
