@@ -10,6 +10,25 @@ FoDeGlider is a miniature hybrid underwater glider equipped with two independent
   <sub>Overview of the FoDeGlider platform and its principal components.</sub>
 </p>
 
+## Repository Contents
+
+```text
+FoDeGlider/
+|-- assets/                           # Images and media used in this README
+|-- code/
+|   |-- identification/               # Stage A-E model-identification programs
+|   |-- evaluation/                   # Evaluation studies
+|   |-- run_scripts/                  # .sh files for the identification stages
+|   `-- requirements.txt              # Python dependencies
+|-- config/                           # Normalization and physical-parameter files
+|-- data/
+|   |-- raw_mocap_csv/                # Raw motion-capture measurements
+|   `-- processed_mocap/stage_a_to_e/ # Processed data
+|-- electronics/                      # Electrical architecture and PCB design files
+|-- hardware/                         # Mechanical drawings and printable STL models
+`-- software/                         # Embedded firmware and control documentation
+```
+
 ## System Overview
 
 <table>
@@ -50,24 +69,9 @@ FoDeGlider is a miniature hybrid underwater glider equipped with two independent
   <sub>Xbox control mapping for operating FoDeGlider.</sub>
 </p>
 
-## Repository Contents
+## Dataset
 
-```text
-FoDeGlider/
-|-- assets/                           # Images and media used in this README
-|-- code/
-|   |-- identification/               # Stage A-E model-identification programs
-|   |-- evaluation/                   # Evaluation studies
-|   |-- run_scripts/                  # .sh files for the identification stages
-|   `-- requirements.txt              # Python dependencies
-|-- config/                           # Normalization and physical-parameter files
-|-- data/
-|   |-- raw_mocap_csv/                # Raw motion-capture measurements
-|   `-- processed_mocap/stage_a_to_e/ # Processed data
-|-- electronics/                      # Electrical architecture and PCB design files
-|-- hardware/                         # Mechanical drawings and printable STL models
-`-- software/                         # Embedded firmware and control documentation
-```
+The repository contains both raw motion-capture CSV files and processed data files used by the identification pipeline.
 
 ## Model Identification
 
@@ -80,10 +84,6 @@ The evaluation programs support comparisons between the full multibody model and
 - `code/evaluation/scale_ablation.py` produces `scale_ablation_summary.csv`.
 
 Both summaries report the mean and median normalized mean-squared error at the window and trajectory levels.
-
-## Dataset
-
-The repository contains both raw motion-capture CSV files and processed data files used by the identification pipeline.
 
 ## Firmware
 
