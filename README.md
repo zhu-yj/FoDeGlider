@@ -15,7 +15,7 @@ FoDeGlider is a miniature hybrid underwater glider equipped with two independent
 <table>
   <tr>
     <td width="70%" align="center">
-      <img src="assets/Electrical_architecture_0427_4.png" width="430" alt="FoDeGlider electrical architecture">
+      <img src="assets/Electrical_architecture_0715.png" width="430" alt="FoDeGlider electrical architecture">
       <br>
       <sub>Electrical architecture and onboard system connections.</sub>
     </td>
